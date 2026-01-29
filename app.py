@@ -20,7 +20,7 @@ st.write("Predict *Next Day Close Price* using Machine Learning (Linear Regressi
 # -------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"c:\Users\Admin\Downloads\stocks.csv")
+    df = pd.read_csv(r"stocks.csv")
     df["Date"] = pd.to_datetime(df["Date"])
     return df
 
@@ -94,4 +94,5 @@ st.success(f"Predicted Next Close Price for {ticker}: ₹ {round(next_day_price,
 # Footer
 # -------------------------------
 st.markdown("---")
+
 st.caption("Built with ❤️ using Streamlit & Machine Learning")
